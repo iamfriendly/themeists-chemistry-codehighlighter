@@ -1,9 +1,18 @@
 <?php
 
-	if( !class_exists( 'chemistry_potion_code_highlighter' ) )
+	if( !class_exists( 'ChemistryPotionCodeHighlighter' ) )
 	{
 
-		class chemistry_potion_code_highlighter extends chemistry_molecule_widget
+		/**
+		 * Just like the WordPress widget structure, we extend a class to make our potions
+		 * We extend the chemistry_molecule_widget class.
+		 *
+		 * @author Richard Tape
+		 * @package ChemistryPotionCodeHighlighter
+		 * @since 1.0
+		 */
+		
+		class ChemistryPotionCodeHighlighter extends chemistry_molecule_widget
 		{
 
 			/**
@@ -16,7 +25,7 @@
 			 * #potions-overlay .potion-type-example .chemistry-potion-inner{ styles_here }
 			 *
 			 * @author Richard Tape
-			 * @package chemistry_potion_code_highlighter
+			 * @package ChemistryPotionCodeHighlighter
 			 * @since 1.0
 			 * @param None
 			 * @return None
@@ -42,7 +51,7 @@
 			 * Output the markup for our code highlighter - ensure we load our styles and scripts first
 			 *
 			 * @author Richard Tape
-			 * @package chemistry_potion_code_highlighter
+			 * @package ChemistryPotionCodeHighlighter
 			 * @since 1.0
 			 * @param (array) $widget - widget config
 			 * @return Markup
@@ -70,7 +79,7 @@
 				$return = '<pre class="brush: ' . $widget['type'] . ';">' . htmlspecialchars( $code ) . '</pre>';
 				
 				//Filters as always
-				return apply_filters( 'chemistry_potion_code_highlighter_markup', $return );
+				return apply_filters( 'ChemistryPotionCodeHighlighter_markup', $return );
 
 			}/* widget() */
 
@@ -81,7 +90,7 @@
 			 * The admin form for this widget
 			 *
 			 * @author Richard Tape
-			 * @package chemistry_potion_code_highlighter
+			 * @package ChemistryPotionCodeHighlighter
 			 * @since 1.0
 			 * @param (array) $widget - The specific details for this widget
 			 * @return The markup
@@ -137,7 +146,7 @@
 			 * plugins_url()
 			 *
 			 * @author Richard Tape
-			 * @package chemistry_potion_code_highlighter
+			 * @package ChemistryPotionCodeHighlighter
 			 * @since 1.0
 			 * @param 
 			 * @return 
@@ -154,8 +163,8 @@
 
 			}/* local_dev_symlink_plugins_url_fix() */
 
-		}/* class chemistry_potion_code_highlighter */
+		}/* class ChemistryPotionCodeHighlighter */
 
-	}/* !class_exists( 'chemistry_potion_code_highlighter' ) */
+	}/* !class_exists( 'ChemistryPotionCodeHighlighter' ) */
 
 ?>

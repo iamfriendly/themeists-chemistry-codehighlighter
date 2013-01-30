@@ -81,7 +81,7 @@
 			{
 
 				//Set the potion class name and form the path to the class file
-				$potion = 'chemistry_potion_code_highlighter';
+				$potion = 'ChemistryPotionCodeHighlighter';
 				$potion_path = plugin_dir_path( __FILE__ ) . 'class.' . $potion . '.php';
 
 				//If that file name exists, load it
